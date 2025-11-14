@@ -1,0 +1,1 @@
+print(">>> Olá do script plot_simples_grafico.py! Testes OK.")

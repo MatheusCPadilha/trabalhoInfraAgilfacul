@@ -1,0 +1,27 @@
+
+stages:
+  - build
+  - test
+
+
+build_job:
+  stage: build
+  script:
+    - echo "Simulando a etapa de 'build'..."
+    - echo "Construindo a imagem Docker (simulado)..."
+    - echo "Build concluído."
+
+
+test_job:
+  stage: test
+  script:
+    - echo "Simulando a etapa de 'test'..."
+    - echo "Executando o script relogio.py (simulado)..."
+    - python relogio.py
+    - echo "Executando o script plot_simples_grafico.py (simulado)..."
+    - python plot_simples_grafico.py
+    - echo "Testes concluídos."
+    # Vamos usar o script de notificação de sucesso aqui
+    - chmod +x notificacaoSucesso.sh
+    - ./notificacaoSucesso.sh
+  image: python:3.9-slim

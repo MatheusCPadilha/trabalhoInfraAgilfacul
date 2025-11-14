@@ -1,0 +1,1 @@
+print(">>> Olá do script relogio.py! Pipeline funcionando.")
